@@ -27,6 +27,11 @@ hr.rounded {
     margin: 15px;
 }
 
+.button-margin {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .testimonial-icon {
     width: 10%;
 }
