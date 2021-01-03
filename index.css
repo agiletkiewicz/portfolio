@@ -27,6 +27,15 @@ hr.rounded {
     margin: 15px;
 }
 
+.testimonial-icon {
+    width: 10%;
+}
+
+.quote {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 @media only screen and (max-width: 600px) {
 
     .portrait-image {
@@ -36,6 +45,10 @@ hr.rounded {
     .header {
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    .testimonial-icon {
+        width: 20%;
     }
 
 }
