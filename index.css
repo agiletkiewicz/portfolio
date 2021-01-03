@@ -32,8 +32,10 @@ hr.rounded {
 }
 
 .quote {
-    margin-left: 20%;
-    margin-right: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-image: url("./public/background.png");
+    background-position: bottom;
 }
 
 @media only screen and (max-width: 600px) {
@@ -49,6 +51,11 @@ hr.rounded {
 
     .testimonial-icon {
         width: 20%;
+    }
+
+    .quote {
+    padding-left: 5%;
+    padding-right: 5%;
     }
 
 }
