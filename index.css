@@ -34,8 +34,9 @@ hr.rounded {
 .quote {
     padding-left: 20%;
     padding-right: 20%;
-    background-image: url("./public/background.png");
-    background-position: bottom;
+    background-image: url("./public/quote.jpg");
+    background-position: center top;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
