@@ -23,6 +23,10 @@ hr.rounded {
     width: 100%;
 }  
 
+.icon-margin {
+    margin: 15px;
+}
+
 @media only screen and (max-width: 600px) {
 
     .portrait-image {
