@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./index.css">
     <title>Agi's Portfolio</title>
-    <link rel="shortcut icon" type="image/png" href="./public/ALT.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="./public/ALT.jpg"/>
   </head>
   <body>
 
@@ -28,9 +27,9 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <!-- <a class="navbar-item is-active">
-                  Home
-                </a> -->
+                <a class="navbar-item is-active">
+                  About
+                </a>
                 <a class="navbar-item">
                   Portfolio
                 </a>
@@ -54,11 +53,11 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">
+          <h1 class="title is-1">
             Hey, I'm Agi!
           </h1>
           <br />
-          <h2 class="subtitle">
+          <h2 class="subtitle is-3">
             Full-stack developer obsessed with the user experience
           </h2>
           <div>
@@ -67,6 +66,14 @@
         </div>
       </div>
     
+    </section>
+      <!-- <span class="icon-text">
+        <span class="icon is-large">
+          <i class="fab fa-react"></i>
+        </span>
+      </span> -->
+    <section>
+      
     </section>
 
     <section class="hero is-info">
@@ -84,13 +91,14 @@
 
     <section class="content">
       <div class="container">
-        <h1 class="title">Featured Project</h1>
+        <h2 class="subtitle is-3">Featured Project</h2>
+        <hr class="rounded">
       </div>
 
       <div class="tile is-ancestor">
         <div class="tile is-parent is-7">
           <article class="tile is-child box">
-            <img src ="./public/my-minimony-gif.gif"/>
+            <img src ="./public/my-minimony-gif.gif" class="project-image"/>
           </article>
         </div>
         <div class="tile is-parent">
@@ -98,7 +106,33 @@
             <p class="title">My Minimony</p>
             <p class="subtitle">A React app for saving and sharing ideas for tiny weddings.</p>
             <div class="content">
-              <p>outline features</p>
+              <p>
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="far fa-star"></i>
+                  </span>
+                  <span>Features</span>
+                </span>
+                <ul>
+                  <li>Image upload</li>
+                  <li>Secure login</li>
+                  <li>Search</li>
+                  <li>Return to scroll position</li>
+                </ul>
+                <br/>
+                <div class="tile is-ancestor">
+                  <div class="tile">
+                    <form action="https://www.myminimonyapp.com">
+                      <button class="button is-info is-focused">Visit site</button>
+                    </form>
+                  </div>
+                  <div class="tile">
+                    <form action="https://github.com/agiletkiewicz/my-minimony-frontend">
+                      <button class="button is-info is-focused"><i class="fab fa-github"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </p>
             </div>
           </article>
         </div>
@@ -108,5 +142,6 @@
   </body>
 
 <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+<script src="https://kit.fontawesome.com/682e6d036f.js" crossorigin="anonymous"></script>
 
 </html>
