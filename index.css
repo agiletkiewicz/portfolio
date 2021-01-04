@@ -23,6 +23,13 @@ hr.rounded {
     width: 100%;
 }  
 
+.company-image {
+    width: 50%;
+    margin: auto;
+    display: block;
+    align-content: center;
+}
+
 .icon-margin {
     margin-left: 15px;
     margin-right: 15px;
@@ -72,4 +79,8 @@ hr.rounded {
     padding-right: 5%;
     }
 
+    .company-image {
+        width: 60%;
+    }
+    
 }
