@@ -45,6 +45,13 @@ hr.rounded {
     background-size: cover;
 }
 
+/* .technologies {
+    margin-top: -6rem;
+    padding-left: 35%;
+    padding-right: 35%;
+} */
+
+
 @media only screen and (max-width: 600px) {
 
     .portrait-image {
