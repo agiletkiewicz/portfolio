@@ -52,6 +52,11 @@ hr.rounded {
     background-size: cover;
 }
 
+.headshot {
+    width: 600px;
+    height: 450px;
+}
+
 /* .technologies {
     margin-top: -6rem;
     padding-left: 35%;
@@ -81,6 +86,11 @@ hr.rounded {
 
     .company-image {
         width: 60%;
+    }
+
+    .headshot {
+        width: 90%;
+        height: auto;
     }
     
 }
