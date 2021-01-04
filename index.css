@@ -24,7 +24,8 @@ hr.rounded {
 }  
 
 .icon-margin {
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .button-margin {
