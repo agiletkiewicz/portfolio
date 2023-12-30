@@ -1,9 +1,8 @@
-
-
+/* global styles */
 body {
   margin: 0;
   padding: 0;
-  position: relative; /* Make the body relative */
+  position: relative;
   font-family: 'Raleway';
   color: #2c3531
 }
@@ -32,6 +31,13 @@ a {
   padding-top: 5px;
 }
 
+hr.rounded {
+  border-top: 3px solid #E0E0E0;
+  border-radius: 5px;
+  width: 60%;
+}
+
+/* hero/top section */
 
 .hero-background {
   background-color: #d1e8e2;
@@ -57,7 +63,8 @@ a {
   }
 
   #hero-bounce {
-    animation: bounce 2s infinite;
+    margin-left: 10px;
+    animation: bounce 3s infinite;
 
     /* override defaults */
     animation-play-state: running;
@@ -128,8 +135,7 @@ a {
     color: white;
 
     .portrait-image {
-      flex: 0 0 30%;
-      min-width: 300px;
+      min-width: 400px;
       height: auto;
     }
 
@@ -145,6 +151,8 @@ a {
     }
 
   }
+
+/* technical section */
 
 .technical {
   height: 350px;
@@ -164,6 +172,51 @@ a {
   }
 }
 
+  .falling-shapes {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .falling-shapes.active > span {
+    animation: bounce-in-right 2s ease;
+  }
+
+  @keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    80% { transform: translateY(-10px); }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+
+  #icon-1, #icon-2, #icon-3, #icon-4, #icon-5, #icon-6, #icon-7, #icon-8 {
+    animation-iteration-count: 1;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  #icon-1, #icon-4 {
+    animation-delay: 0s;
+  }
+
+  #icon-2, #icon-5, #icon-6, #icon-8 {
+    animation-delay: 1s;
+  }
+
+  #icon-3, #icon-7 {
+    animation-delay: 0.5s;
+  }
+
+/* testimonials section */
 
 .testimonials {
   background-color: #d9b08c;
@@ -213,11 +266,7 @@ a {
   }
 }
 
-hr.rounded {
-  border-top: 3px solid #E0E0E0;
-  border-radius: 5px;
-  width: 60%;
-}
+/* projects section */
 
 .projects {
 
@@ -330,10 +379,23 @@ hr.rounded {
     }
   }
 
+  .about-text {
+    h2 {
+      font-size: 30px;
+      margin-top: 5px;
+    }
+  }
+
   .icon.icon-margin.fa-4x {
-    width: 50px;
     font-size: 2em;
     margin-right: -20px;
+    margin-left: 20px;
+  }
+
+  .icon.icon-margin.fa-3x {
+    font-size: 2em;
+    margin-right: -20px;
+    margin-left: -15px;
   }
 
   .portrait-image {
@@ -378,22 +440,16 @@ hr.rounded {
     padding-right: 5%;
   }
 
-  .company-image {
-    width: 60%;
-  }
-
   .headshot {
     width: 90%;
     height: auto;
   }
-  
 }
 
 :root * {
+  /* Gloabally pause animationa and bind to scroll */
   animation-play-state: paused;
-  /* Bind the animation to scroll */
   animation-delay: calc(var(--scroll) * -1s);
-  /* These last 2 properites clean up overshoot weirdness */
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }

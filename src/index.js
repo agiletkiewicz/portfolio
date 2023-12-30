@@ -1,15 +1,12 @@
 
 window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY / (document.body.offsetHeight - window.innerHeight);
-  document.body.style.setProperty('--scroll', scrollPosition);
 
-  const testimonials = document.querySelector('.testimonials-container');
+  // set css variable for scroll position
+  const scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
+  document.body.style.setProperty('--scroll', scrollPercent);
 
+  // hero section
   const borderBox = document.querySelector('.hero-border-box');
-
-  const quote1 = document.querySelector('.quote-1');
-  const quote2 = document.querySelector('.quote-2');
-  const quote3 = document.querySelector('.quote-3');
 
   if (window.scrollY > 2000) {
     borderBox.style.display = 'none';
@@ -17,63 +14,62 @@ window.addEventListener('scroll', () => {
     borderBox.style.display = 'block';
   }
 
+  // technical section
+  if (window.scrollY > 2400) {
+    const fallingShapes = document.querySelector('.falling-shapes');
+    fallingShapes.classList.add('active')
+  }
 
+  // testimonials section
   if (window.scrollY > 3300) {
+    const testimonials = document.querySelector('.testimonials-container');
     testimonials.style.position = 'sticky';
     testimonials.style.top = '100px'
   }
 
-  console.log(window.scrollY)
-
-
-  if (window.innerWidth < 600) {
-    if (window.scrollY > 3600 && window.scrollY < 4600) {
-      const percent = (window.scrollY - 3600) / 1000;
-      
-      quote1.style.opacity = 1 - percent;
-      quote3.style.opacity = 1 - percent;
-      quote2.style.opacity = percent;
-  
-      const move = 60 * percent;
-  
-      quote1.style.transform = `translate3d(0px, -${move}vh, 0px)`;
-      quote2.style.transform = `translate3d(0px, -${move}vh, 0px)`;
-  
-    } else if (window.scrollY > 4600 && window.scrollY < 5600) {
-      const percent = (window.scrollY - 3600) / 1000;
-      
-      quote2.style.opacity = 1 - (percent - 1);
-      quote3.style.opacity = percent - 1;
-  
-      const move = 60 * percent;
-  
-      quote2.style.transform = `translate3d(0px, -${move}vh, 0px)`;
-      quote3.style.transform = `translate3d(0px, -${move}vh, 0px)`;
-    }
-  } else {
-    if (window.scrollY > 3800 && window.scrollY < 4800) {
-      const percent = (window.scrollY - 3800) / 1000;
-      
-      quote1.style.opacity = 1 - percent;
-      quote3.style.opacity = 1 - percent;
-      quote2.style.opacity = percent;
-  
-      const move = 300 * percent;
-  
-      quote1.style.transform = `translate3d(0px, -${move}px, 0px)`;
-      quote2.style.transform = `translate3d(0px, -${move}px, 0px)`;
-  
-    } else if (window.scrollY > 4800 && window.scrollY < 5800) {
-      const percent = (window.scrollY - 3800) / 1000;
-      
-      quote2.style.opacity = 1 - (percent - 1);
-      quote3.style.opacity = percent - 1;
-  
-      const move = 300 * percent;
-  
-      quote2.style.transform = `translate3d(0px, -${move}px, 0px)`;
-      quote3.style.transform = `translate3d(0px, -${move}px, 0px)`;
-    }
+  if (window.scrollY > 3600) {
+    quoteScroll();
   }
 
 }, false);
+
+function quoteScroll() {
+
+  const quote1 = document.querySelector('.quote-1');
+  const quote2 = document.querySelector('.quote-2');
+  const quote3 = document.querySelector('.quote-3');
+
+  const percentInSection = (window.scrollY - 3800) / 1000;
+
+  const transformString = getTransformString(percentInSection)
+
+  if (window.scrollY > 3800 && window.scrollY < 4800) {
+    
+    quote1.style.opacity = 1 - percentInSection;
+    quote3.style.opacity = 1 - percentInSection;
+    quote2.style.opacity = percentInSection;
+
+    quote1.style.transform = transformString;
+    quote2.style.transform = transformString
+
+  } else if (window.scrollY > 4800 && window.scrollY < 5800) {
+    
+    quote2.style.opacity = 1 - (percentInSection - 1);
+    quote3.style.opacity = percentInSection - 1;
+
+    quote2.style.transform = transformString;
+    quote3.style.transform = transformString;
+  }
+}
+
+function getTransformString(percentInSection) {
+  const isMobile = window.innerWidth < 600;
+
+  const multiplier = isMobile ? 60 : 300;
+
+  const units = isMobile ? 'vh' : 'px';
+
+  const movement = multiplier * percentInSection;
+
+  return `translate3d(0px, -${movement}${units}, 0px)`;
+}
