@@ -47,6 +47,7 @@ hr.rounded {
 .hero-title {
   display: flex;
   padding: 20px;
+  text-align: center;
 }
 
 @keyframes hero-background {
@@ -75,13 +76,13 @@ hr.rounded {
 
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+      transform: translateY(50);
     }
     40% {
-      transform: translateY(-30px);
+      transform: translateY(20px);
     }
     60% {
-      transform: translateY(-15px);
+      transform: translateY(35px);
     }
   }
 
@@ -135,11 +136,11 @@ hr.rounded {
     color: white;
 
     .portrait-image {
-      min-width: 400px;
+      min-width: 300px;
       height: auto;
     }
 
-    .about-text {
+    #about-text {
       flex: 1;
       min-width: 300px;
     }
@@ -381,6 +382,12 @@ hr.rounded {
     margin-top: 5px;
   }
 
+  .nav-bar-content {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+  }
+
   .icon.icon-margin.fa-4x {
     font-size: 2em;
     margin-right: -20px;
@@ -402,7 +409,7 @@ hr.rounded {
     padding-right: 10%;
   }
 
-  .testimonial-icon {
+  .testimonials .testimonial-icon {
     width: 20%;
   }
 

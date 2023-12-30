@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
   }
 
   // technical section
-  if (window.scrollY > 2400) {
+  if (window.scrollY > 2600) {
     const fallingShapes = document.querySelector('.falling-shapes');
     fallingShapes.classList.add('active')
   }
@@ -46,7 +46,6 @@ function quoteScroll() {
   if (window.scrollY > 3800 && window.scrollY < 4800) {
     
     quote1.style.opacity = 1 - percentInSection;
-    quote3.style.opacity = 1 - percentInSection;
     quote2.style.opacity = percentInSection;
 
     quote1.style.transform = transformString;
@@ -65,7 +64,7 @@ function quoteScroll() {
 function getTransformString(percentInSection) {
   const isMobile = window.innerWidth < 600;
 
-  const multiplier = isMobile ? 60 : 300;
+  const multiplier = isMobile ? 65 : 300;
 
   const units = isMobile ? 'vh' : 'px';
 
