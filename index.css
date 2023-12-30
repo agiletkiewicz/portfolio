@@ -308,6 +308,7 @@ hr.rounded {
     display: flex;
     padding: 10px;
   }
+}
 
   .title {
     font-size: 30px;
@@ -332,7 +333,6 @@ hr.rounded {
       cursor: pointer;
     }
   }
-}
 
 .footer {
   display: flex;
@@ -379,7 +379,7 @@ hr.rounded {
     }
   }
 
-  .about-text {
+  #about-text {
     h2 {
       font-size: 30px;
       margin-top: 5px;
