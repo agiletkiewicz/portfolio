@@ -349,7 +349,7 @@ hr.rounded {
 
   .hero-logo {
     width: 250px;
-    top: 280px;
+    top: 350px;
   }
 
   @keyframes hero-logo {
@@ -364,6 +364,7 @@ hr.rounded {
 
   .hero-border-box {
     width: 300px;
+    top: 280px;
   }
 
   @keyframes hero-border-box {
@@ -375,6 +376,10 @@ hr.rounded {
       height: 110%;
       top: 50px;
     }
+  }
+  
+  h2 {
+    margin-bottom: 0px;
   }
 
   #about-heading {
@@ -414,8 +419,10 @@ hr.rounded {
   }
 
   .testimonials {
+
     .quotes-container {
       height: 60vh;
+      margin-top: 0px;
     }
 
     .quote-2 {
