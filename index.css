@@ -41,7 +41,7 @@ hr.rounded {
 
 .hero-background {
   background-color: #d1e8e2;
-  animation: hero-background 0.25s linear;
+  animation: hero-background 0.2s linear;
 }
 
 .hero-title {
@@ -87,7 +87,7 @@ hr.rounded {
   }
 
   .hero-logo {
-    animation: hero-logo 0.25s steps(50, end);
+    animation: hero-logo 0.2s steps(50, end);
     position: fixed;
     top: 240px;
     width: 450px; /* Initial width */
@@ -254,6 +254,18 @@ hr.rounded {
     top: 600px;
     opacity: 0;
   }
+
+  .quote-4 {
+    position: absolute;
+    top: 900px;
+    opacity: 0;
+  }
+
+  .quote-5 {
+    position: absolute;
+    top: 1200px;
+    opacity: 0;
+  }
   
   .quote {
     background-image: url("./public/quote.jpg");
@@ -321,6 +333,7 @@ hr.rounded {
   .button-container {
     display: flex;
     justify-content: center;
+    gap: 20px;
   }
 
   .button {
@@ -349,7 +362,7 @@ hr.rounded {
 
   .hero-logo {
     width: 250px;
-    top: 280px;
+    top: 350px;
   }
 
   @keyframes hero-logo {
@@ -364,6 +377,7 @@ hr.rounded {
 
   .hero-border-box {
     width: 300px;
+    top: 280px;
   }
 
   @keyframes hero-border-box {
@@ -375,6 +389,10 @@ hr.rounded {
       height: 110%;
       top: 50px;
     }
+  }
+  
+  h2 {
+    margin-bottom: 0px;
   }
 
   #about-heading {
@@ -414,8 +432,10 @@ hr.rounded {
   }
 
   .testimonials {
+
     .quotes-container {
       height: 60vh;
+      margin-top: 0px;
     }
 
     .quote-2 {
@@ -424,6 +444,14 @@ hr.rounded {
     
     .quote-3 {
       top: 120vh;
+    }
+
+    .quote-4 {
+      top: 180vh;
+    }
+
+    .quote-5 {
+      top: 240vh;
     }
   }
 
