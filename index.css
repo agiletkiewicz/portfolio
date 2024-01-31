@@ -254,6 +254,18 @@ hr.rounded {
     top: 600px;
     opacity: 0;
   }
+
+  .quote-4 {
+    position: absolute;
+    top: 900px;
+    opacity: 0;
+  }
+
+  .quote-5 {
+    position: absolute;
+    top: 1200px;
+    opacity: 0;
+  }
   
   .quote {
     background-image: url("./public/quote.jpg");
@@ -432,6 +444,14 @@ hr.rounded {
     
     .quote-3 {
       top: 120vh;
+    }
+
+    .quote-4 {
+      top: 180vh;
+    }
+
+    .quote-5 {
+      top: 240vh;
     }
   }
 
